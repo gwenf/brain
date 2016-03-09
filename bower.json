@@ -1,0 +1,22 @@
+{
+  "name": "test-site",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "gwenfaraday@gmail.com"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ngModal": "^1.2.2",
+    "angular-ui-router": "^0.2.18"
+  }
+}
