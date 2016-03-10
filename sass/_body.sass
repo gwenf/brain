@@ -1,0 +1,39 @@
+.main-content
+  text-align: center
+  img
+    width: 100%
+    margin: 60px auto
+    border-radius: 20px
+    box-shadow: 2px 2px 20px gray
+  h1
+    padding-top: 30%
+
+  .row
+    font-size: 1.2em
+    transition: all .5s ease-in-out
+    opacity: .2
+    img
+      z-index: 10 !important
+    &:hover
+      opacity: 1
+      color: $blue
+    p
+      transition: .5s ease-in-out
+      z-index: 1000 !important
+    p:hover
+      background: rgba(256, 256, 256, 0.6)
+      transform: scale(1.2)
+      color: $blue
+
+
+// @keyframes zoomTwist
+//   0%
+//     color: black
+//     opacity: 0
+//     transform: rotate(-30deg)
+//     transform: scale(1)
+//   100%
+//     color: $blue
+//     transform: rotate(30deg)
+//     opacity: 1
+//     transform: scale(1.2)

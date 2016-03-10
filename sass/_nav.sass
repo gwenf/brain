@@ -1,5 +1,40 @@
 nav
   width: 100%
-  background: white
-  opacity: .9
-  margin-top: 800px
+  height: 115px
+  border-bottom: 15px solid $teal
+  // background: white
+  .inner-nav
+    width: 710px
+    margin: 0 auto
+    // border-bottom: 2px solid lightgray
+    div
+      display: inline
+      text-align: center
+      font-size: 2.4em
+    a
+      position: relative
+      text-decoration: none
+    a:before
+      content: ""
+      position: absolute
+      width: 100%
+      height: 2px
+      bottom: 0
+      left: 0
+      background-color: #000
+      visibility: hidden
+      transform: scaleX(0)
+      transition: all 0.3s ease-in-out 0s
+    a:hover:before
+      visibility: visible
+      transform: scaleX(1)
+    div:first-child
+      padding-right: 10px
+    div:nth-child(3)
+      padding-left: 10px
+    img
+      height: 100px
+      margin: 0 auto
+      transition: all .5s ease-in-out
+      &:hover
+        transform: rotate(360deg)
