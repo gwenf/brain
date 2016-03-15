@@ -415,6 +415,23 @@ a:hover {
   white-space: nowrap;
 }
 
+.return-home .button-home {
+  width: 100px;
+  height: 40px;
+  display: block;
+  text-align: center;
+  padding: 12px 5px;
+  border: 2px solid #288bc9;
+  background: #49a3db;
+  color: white;
+}
+.return-home .button-home a {
+  text-decoration: none;
+}
+.return-home .button-home a:hover {
+  text-decoration: none;
+}
+
 header {
   background: url("../images/brainSiteHeader.png") no-repeat center center fixed;
   border-bottom: 15px solid #2dada6;

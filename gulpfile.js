@@ -24,9 +24,9 @@ if (env === 'development'){
 console.log(sassStyle);
 
 jsSources = [
-      'components/scripts/jquery-2.2.0.min.js',
-      'components/scripts/jquery.sticky.js',
-      'components/scripts/custom.js'
+      'scripts/scroller.js',
+      'scripts/variables.js',
+      'scripts/app.js'
     ];
 sassSources = [
       'sass/styles.sass'
