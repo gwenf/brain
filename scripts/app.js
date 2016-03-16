@@ -23,12 +23,28 @@ app.config(['$stateProvider','$urlRouterProvider', function($stateProvider,$urlR
     url: '/privacy',
     templateUrl: 'templates/privacy.html'
   });
-  $stateProvider.state('why', {
-      url: '/why',
-      template: '<h1>This Is A State</h1>'
-  });
-  $stateProvider.state('how', {
-      url: '/how',
-      template: '<h1>This Is A State</h1>'
-  });
+  // $stateProvider.state('why', {
+  //     url: '/why',
+  //     template: '<h1>This Is A State</h1>'
+  // });
+  // $stateProvider.state('how', {
+  //     url: '/how',
+  //     template: '<h1>This Is A State</h1>'
+  // });
 }]);
+
+app.controller('ScrollCtrl', ['$scope', '$location', '$anchorScroll',
+  function ($scope, $location, $anchorScroll) {
+    $scope.gotoWhy = function() {
+      $location.hash('why');
+      $anchorScroll();
+    };
+    $scope.gotoHow = function() {
+      $location.hash('how');
+      $anchorScroll();
+    };
+    $scope.gotoBuyNow = function() {
+      $location.hash('buyNow');
+      $anchorScroll();
+    };
+  }]);

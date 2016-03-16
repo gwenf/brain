@@ -409,27 +409,36 @@ a:hover {
 
 .ingredients, .terms, .privacy {
   padding: 1%;
+  display: block;
+}
+
+.ingredients img, .ingredients div {
+  display: block;
+  margin: 20px auto;
 }
 
 .dba {
   white-space: nowrap;
 }
 
-.return-home .button-home {
-  width: 100px;
-  height: 40px;
+.return-home {
+  position: relative;
   display: block;
-  text-align: center;
-  padding: 12px 5px;
-  border: 2px solid #288bc9;
-  background: #49a3db;
+  font-size: 2em;
+}
+.return-home a:hover {
+  text-decoration: none;
+}
+.return-home .button-link {
   color: white;
+  padding: 7px 12px;
+  border: 2px solid #cf5044;
+  background: #eec2be;
+  text-align: center;
+  width: 200px;
 }
-.return-home .button-home a {
-  text-decoration: none;
-}
-.return-home .button-home a:hover {
-  text-decoration: none;
+.return-home .button-link:hover {
+  box-shadow: 0 0 5px gray;
 }
 
 header {

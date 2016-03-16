@@ -9,7 +9,7 @@
     <script src='https://code.angularjs.org/1.4.8/angular-animate.min.js'></script>
     <script src='/bower_components/ngModal/dist/ng-modal.min.js'></script>
 
-    <script src='scripts/scroller.js'></script>
+    <!-- <script src='scripts/scroller.js'></script> -->
     <script src='scripts/variables.js'></script>
     <script src='scripts/app.js'></script>
 
@@ -18,12 +18,13 @@
     <link rel="stylesheet" href="animate.css">
     <link rel="stylesheet" href="css/styles.css">
   </head>
-  <body ng-app='brainApp'>
+  <body ng-app='brainApp' ng-controller='ScrollCtrl'>
     <header ng-include="'partials/header.html'"></header>
     <!-- <nav ng-include="'partials/nav.html'"></nav> -->
     <div ui-view=''></div>
     <!-- <div class="main-content" ng-include="'partials/body.html'"></div>
     <div class="order-form row" ng-include="'partials/order-form.html'"></div> -->
     <footer ng-include="'partials/footer.html'"></footer>
+     
   </body>
 </html>
