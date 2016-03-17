@@ -1,56 +1,86 @@
-<form id="buyNow" action="thankyou.html" method="post" class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-            <fieldset>
-              <legend>Complete Your Order</legend>
-              <div class="cart col-md-10 col-md-offset-1">
-                <section>
-                  <div class="col-lg-3"><img src="images/eyeserumFinal.png" alt=""/></div>
-                  <!-- <div class="clearfix visible-lg-block"></div>-->
-                  <div class="col-lg-offset-2 col-lg-7">
-                    <h1>Shopping Cart</h1>
-                    <div class="inner-cart">
-                      <p>
-                        <input type="checkbox" checked="" disabled=""/>                    VitaYouth Skin Cream - FREE
-                      </p>
-                      <p>
-                        <input type="checkbox" checked="" disabled=""/>                    Shipping Charge - 3.95
-                      </p>
-                      <h3>Today's Total Cost: $3.95</h3>
-                    </div>
-                  </div>
-                </section>
-              </div>
-              <div class="input-form row"></div>
-              <div class="spacing"></div>
-              <div class="form-group">
-                <label for="card_type">Card Type:</label>
-                <select id="card_type" class="form-control">
-                  <option>VISA</option>
-                  <option>Mastercard</option>
-                  <option>Discover</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <div class="input-group"><span class="input-group-addon">Credit Card Number:</span>
-                  <input id="creditNum" type="number" placeholder="#" required="" class="form-control"/>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="input-group"><span class="input-group-addon">CVV:</span>
-                  <input id="cvv" type="number" placeholder="#" required="" class="form-control"/>
-                </div>
-              </div>
-              <div class="checkbox">
-                <input type="checkbox" required=""/> 
-                <label>
-                  I agree to the Terms & Conditions and I
-                  am at least 18 years old. By placing your order
-                  today you'll be shipped a 30 day supply of
-                  VitaYouth Cream for $4.95 S&H. All products
-                  ship within 1 business day and deliver in 2-4 days.
-                  Try it for 14 days (10 day trial plus 4 days added for
-                  transit time) call: 855-511-2243 to cancel.
-                </label>
-              </div>
-              <button type="submit" class="btn order-btn btn-danger">Order Now</button>
-            </fieldset>
-          </form>
+<form ng-controller='FormCtrl' id='cart' action='#/thankyou' class="row" ng-init='totalprice=0'>
+  <div class="col-sm-5 col-sm-offset-2">
+    <div class="row">
+      <div class="col-xs-11 product-box">
+        <img class='col-xs-6' src="../images/brain_five_bottles.png" alt="">
+        <div class="text-description col-sm-6">
+          <h2>Monster Package</h2><input type='radio' name='order-total'>
+          <h3>5 Bottles - <em>Most Popular</em></h3>
+          <h1>97.95</h1>
+          <p>Only 19.59 each!</p>
+        </div>
+      </div>
+      <div class="col-xs-11 product-box">
+        <img class='col-xs-6' src="../images/brain_three_bottles.png" alt="">
+        <div class="text-description col-sm-6">
+          <h2>Middle Package</h2><input type='radio' name='order-total'>
+          <h3>3 Bottles - <em>Good Deal</em>{{user.name}}</h3>
+          <h1>77.95</h1>
+          <p>Only 25.98 each!</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-11 product-box">
+        <img class='col-xs-3 col-xs-offset-2' src="../images/brainBottle.jpg" alt="">
+        <div class="text-description col-xs-6 col-xs-offset-1">
+          <h2>Sampler Package</h2><input type='radio' name='order-total' ng-model=''>
+          <h3>1 Bottle - <em>1 Month Supply</em></h3>
+          <h1>47.95</h1>
+          <p>Retail: <span class='strikethrough'>$68</span></p>
+        </div>
+      </div>
+      <div class="col-xs-11 product-box">
+        <img class='col-xs-3 col-xs-offset-2' src="../images/brainBottle.jpg" alt="">
+        <div class="text-description col-xs-6 col-xs-offset-1">
+          <h2>Trial Package</h2><input type='radio' name='order-total' ng-model=''>
+          <h3>1 Bottle - <em>15 Day Supply</em></h3>
+          <h1>29.87</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- <img class='col-sm-2 col-sm-offset-2' src="../images/brainBottle.jpg" alt=""> -->
+    <fieldset class='col-sm-3 row'>
+      <legend>Complete Your Order</legend>
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" placeholder="First Name" required class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="card_type">Card Type:</label>
+        <select id="card_type" class="form-control">
+          <option>VISA</option>
+          <option>Mastercard</option>
+          <option>Discover</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <div class="input-group"><span class="input-group-addon">Credit Card Number:</span>
+          <input id="creditNum" type="number" placeholder="#" required="" class="form-control"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input-group"><span class="input-group-addon">CVV:</span>
+          <input id="cvv" type="number" placeholder="#" required="" class="form-control"/>
+        </div>
+      </div>
+      <div class="checkbox form-group">
+          <input type="checkbox" required>
+          <label>
+             I agree to the Terms & Conditions and I
+             am at least 18 years old. By placing your order
+             today you'll be shipped a 30 day supply of
+             VitaYouth Cream for $4.95 S&H. All products
+             ship within 1 business day and deliver in 2-4 days.
+             Try it for 14 days (10 day trial plus 4 days added for
+             transit time) call: 855-511-2243 to cancel.
+        </label>
+      </div>
+      <button type="submit" class="btn order-btn btn-danger">Order Now</button>
+      <div class="row">
+        <h1>Order Total: ${{totalprice}}</h1>
+      </div>
+    </fieldset>
+</form>

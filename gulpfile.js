@@ -56,7 +56,7 @@ gulp.task('compass', function() {
 
 gulp.task('watch', function() {
   livereload.listen();
-  gulp.watch(jsSources, ['js']);
+  // gulp.watch(jsSources, ['js']);
   gulp.watch('sass/*.sass', ['compass']);
   gulp.watch('/*.html', ['html']);
   gulp.watch('images/*.png', ['images']);
